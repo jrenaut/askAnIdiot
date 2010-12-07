@@ -3,7 +3,8 @@ from web import form
 
 render = web.template.render('templates/')
 
-urls = ('/', 'index')
+urls = ('/', 'index',
+	'/credits', 'credits')
 
 EASTER_EGGS = ["seahorse", "seahorses",] 
 IDIOTS = ["JessicaSimpson", "ParisHilton", "lindsaylohan", "kanyewest", "glennbeck", "GovMikeHuckabee", "JoeLieberman",
@@ -14,6 +15,10 @@ app = web.application(urls, globals())
 
 myform = form.Form( 
 	form.Textbox("term"),) 
+	
+class credits:
+	def GET(self):
+		return render.credits()
 
 class index:
 	def GET(self): 

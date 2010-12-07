@@ -1,0 +1,4 @@
+python-twitter==0.6
+simplejson==2.1.2
+web.py==0.34
+wsgiref==0.1.2
