@@ -1,0 +1,3 @@
+#Get an api key from http://words.bighugelabs.com/api.php
+
+THESAURUS_API_KEY = "put-your-api-key-here"

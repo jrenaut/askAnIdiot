@@ -1,0 +1,18 @@
+$def with (form)
+<html>
+<head>
+<link rel="stylesheet" href="static/style.css" type="text/css" media="screen">
+<title>That's how I roll</title>
+</head>
+<body>
+<h3>You stumped the idiots.  Try a smaller word.</h3>
+<div id="content">
+<p>Sarah Palin says, "I don't know anything about that.  That's how I roll."</p>
+<h4>Try again?</h4>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again:</p>
+$:form.render()
+<input type="submit" />    </form>
+</div>
+</body>
+</html>

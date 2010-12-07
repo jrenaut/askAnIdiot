@@ -1,0 +1,21 @@
+$def with (result, term, form)
+<html>
+<head>
+<link rel="stylesheet" href="static/style.css" type="text/css" media="screen">
+<title>Ask an idiot</title>
+</head>
+<body>
+<h3>Ask an idiot</h3>
+<div id="content">
+<div id="question">You asked an idiot about <span class="term">$term</span></div>
+<div id="idiot">Your idiot is: $result.user.name <br /></div>
+<div id="tweet"><img src="$result.user.profile_image_url" />
+$result.text</div>
+<h4>Try again?</h4>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again:</p>
+$:form.render()
+<input type="submit" />    </form>
+</div>
+</body>
+</html>

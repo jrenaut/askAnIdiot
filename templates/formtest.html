@@ -1,0 +1,17 @@
+$def with (form)
+<html>
+<head>
+<title>Ask an idiot</title>
+<link rel="stylesheet" href="static/style.css" type="text/css" media="screen">
+</head>
+<body>
+<h3>Ask an idiot</h3>
+<div id="content">
+<p>Enter a word, one word, about which you're just dying to hear the ramblings of an idiot</p>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again:</p>
+$:form.render()
+<input type="submit" />    </form>
+</div>
+</body>
+</html>

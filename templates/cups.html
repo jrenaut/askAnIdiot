@@ -1,0 +1,17 @@
+$def with (form)
+<html>
+<head>
+<title>Mr. Balloon Hands</title>
+<link rel="stylesheet" href="static/style.css" type="text/css" media="screen">
+</head>
+<body>
+<h3>You are a glorious, glorious human being.</h3>
+<div id="content">
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/skCV2L0c6K0?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/skCV2L0c6K0?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+<h4>Try again?</h4>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again:</p>
+$:form.render()
+<input type="submit" />    </form>
+</div></body>
+</html>
