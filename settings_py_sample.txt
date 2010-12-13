@@ -1,3 +1,12 @@
 #Get an api key from http://words.bighugelabs.com/api.php
-
 THESAURUS_API_KEY = "put-your-api-key-here"
+
+# set to None if you don't want to track with Google Analytics
+GOOGLE_ANALYTICS_KEY = "put-your-Google-analytics-key-here"
+
+# special keywords to bypass the usual search and show something special.  These are hard-coded into handler function
+EASTER_EGGS = ["seahorse", "seahorses",] 
+
+# Twitter handles for the idiots you want to look up.  It will randomly choose 3 each time
+IDIOTS = ["JessicaSimpson", "ParisHilton", "lindsaylohan", "kanyewest", "glennbeck", "GovMikeHuckabee", "JoeLieberman",
+	"katyperry", "algore", "KarlRove", "TilaTequila", "SarahPalinUSA"]
