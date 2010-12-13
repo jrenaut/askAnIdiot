@@ -44,17 +44,16 @@ class index:
 			if y is None and x is None:
 				return None
 			elif y is None:
-				intersection = filter(lambda l:l in x.text.rsplit(" "), _getList(term))
+				intersection = filter(lambda l:l in x.text.rsplit(" "), terms)
 				if len(intersection) > 0:
 					return x
 				return None
 			elif x is None:
-				intersection = filter(lambda l:l in y.text.rsplit(" "), _getList(term))
+				intersection = filter(lambda l:l in y.text.rsplit(" "), terms)
 				if len(intersection) > 0:
 					return y
 				return None
 			else:
-				terms = _getList(term)
 				intersectionx = filter(lambda l:l in x.text.rsplit(" "), terms)
 				intersectiony = filter(lambda l:l in y.text.rsplit(" "), terms)
 				sizeDiff = len(intersectionx) - len(intersectiony)
@@ -75,6 +74,8 @@ class index:
 			from thesaurus import thesaurus
 			t = thesaurus()
 			return t.getAll(term)
+		terms = _getList(term)
+		print terms
 		result = reduce(_compare, statuses)
 		if result is None:
 			return render.howiroll(myform(), GOOGLE_ANALYTICS_KEY)
@@ -85,7 +86,7 @@ class index:
 			return render.cups(myform(), GOOGLE_ANALYTICS_KEY)
 
 # needed to run on Dreamhost (need great hosting?  Sign up with my referral code - http://www.dreamhost.com/r.cgi?66120)
-web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
+#web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 
 if __name__ == "__main__":
 	app.run()
