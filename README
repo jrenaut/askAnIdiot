@@ -1,3 +1,5 @@
 This is just a little web.py webapp I made for my wife's family's annual Secret Santa Christmas Stocking Extravaganza.  
 
 You type in a word, and it gets related words using a thesaurus API, and matches them to words in recent Tweets from some famous people of questionable intelligence.  It returns the most recent tweet that matches the best.  It's not a very smart match, and I'm unlikely to work on this after 12/25/2010, but it has been a fun learning experience.  Web.py is awesome.
+
+You'll need to rename settings_py_sample.txt to settings.py, and follow the directions contained in the file.  You'll also need to figure out how to serve the css file - how you do it will depend on your server, but it shouldn't be complicated.
