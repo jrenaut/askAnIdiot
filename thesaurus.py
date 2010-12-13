@@ -19,7 +19,8 @@ class thesaurus:
 			return None
 	def getAll(self, term):
 		result = self.search(term)
-		retval = [term]
+		retval = []
+		retval.append(term)
 		try:
 			for a, b in result.items():
 				if type(b) == "<type 'list'>":
